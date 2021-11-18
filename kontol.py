@@ -1,4 +1,5 @@
 #python3/tcpflood
+#code by XalbadorX
 import random
 import socket
 import threading
